@@ -1,0 +1,40 @@
+/* Base Styles -------------------- */
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+  background: #343433;
+  @media #{$brk-small}{
+    background: #d1d1c9;
+  }
+}
+
+h1 {
+  @include font-face($white, normal, $stack-radley);
+  font-size: 7.3em;
+  @media #{$brk-small}{
+    font-size: 3em;
+  }
+}
+
+h2 {
+  @include font-face($white, normal, $stack-radley);
+}
+
+h3 {
+  @include font-face($white, normal, $stack-fjalla);
+  letter-spacing: 0.3em;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline;
+}

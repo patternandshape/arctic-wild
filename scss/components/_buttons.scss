@@ -1,0 +1,31 @@
+.button {
+  @include margin(267px 0 0 0);
+  @include padding(0 30px 0 30px);
+  @include font-face($white, normal, $stack-fjalla);
+  display: inline-block;
+  line-height: 60px;
+  background: $orange;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 3px;
+  a {
+    text-decoration: none;
+    text-align: center;
+    color: $white;
+  &hover {
+    color: $white;
+  }
+}
+
+@media #{$brk-small}{
+  display: none;
+}
+}
+
+.fa-caret-down {
+  @include margin(44px 0 0 -65px);
+  position: absolute;
+  color: $orange;
+  font-size: 3em;
+}

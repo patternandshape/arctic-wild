@@ -1,0 +1,274 @@
+.container {
+  @extend %flex;
+  margin:0 auto;
+  padding: 0;
+  max-width: 100vw;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+menu {
+  @extend %flex;
+  @include margin(0 0 0 0);
+  font-family: $stack-open-sans;
+  font-weight: normal;
+  align-items: baseline;
+  font-size: 1em;
+  background-image: url('../img/grey-texture.jpg');
+  width: 100%;
+  height: 80px;
+  border: 0px 1px 2px rgba(0,0,0,0.2);
+  border-bottom: 1px solid $black;
+
+  @media #{$brk-small}{
+    display: none;
+    height:0px;
+    border: 0;
+  }
+}
+
+.menu-nav {
+  @extend %flex;
+  @include margin(0 0 0 73px);
+  width: 70%;
+  justify-content: flex-start;
+  a, li {
+    @include padding(13px 13px 15px 0);
+    line-height: 40px;
+    color: $light-grey;
+    display: inline-block;
+    text-decoration: none;
+    &:hover {
+      color: $white;
+    }
+  }
+  .fa-caret-down {
+      color: $middle-grey;
+      margin: 0;
+      font-size: 1em;
+  }
+  ul {
+      @include margin(-30px 0 0 0);
+
+      @media #{$brk-small}{
+        display: none;
+      }
+  }
+
+  @media #{$brk-small}{
+    display: none;
+  }
+}
+
+    @media #{$brk-small}{
+      display: none;
+    }
+
+a.active {
+      color: $white;
+      &:hover {
+        color: $orange;
+      }
+}
+
+.more {
+  @include padding(8px 0px 8px 30px);
+  border-left: 1px solid $middle-grey;
+  a {
+    color: $orange;
+  }
+}
+
+ul .fa-caret-down {
+  @include margin(-10px 0 0 -10px);
+}
+
+.menu-search {
+  @extend %flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  a {
+    color: $light-grey;
+    display: inline-block;
+    text-decoration: none;
+    &:hover {
+      color: $white;
+    }
+  }
+  h5 {
+    font-size: 1.12em;
+    font-weight: 600;
+    padding-right: 13px;
+
+    @media #{$brk-small}{
+      display: none;
+    }
+  }
+  .fa-search {
+    color: #868686;
+    font-size: 1.3em;
+
+    @media #{$brk-small}{
+      display: none;
+    }
+  }
+}
+
+ // --------------gallery-----------------------
+
+ .gallery {
+   @include margin(60px 0 0 0);
+   h3 {
+     @include font-face($white, normal, $stack-fjalla);
+     font-size: 22px;
+     text-transform: uppercase;
+     margin: 0;
+     letter-spacing: normal;
+   }
+
+   @media #{$brk-small}{
+     margin-top: 5%;
+   }
+ }
+
+.row1 > *, .row2 > * {
+  @extend %gallery-image;
+}
+
+.row1, .row2 {
+  @extend %flex;
+  height: 420px;
+
+  @media #{$brk-small}{
+    flex-direction: column;
+    align-items: center;
+    height: 87vh;
+  }
+}
+
+.gallery-image1 {
+  @include background-image(home-raft);
+  flex: 1 1 100%;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+
+  @media #{$brk-small}{
+    border-radius: 3px;
+    max-width: 90%;
+    margin-bottom: 5%;
+    max-height: 31%;
+  }
+}
+
+.gallery-image2 {
+  @include background-image(home-basecamp);
+
+  @media #{$brk-small}{
+    border-radius: 3px;
+    max-width: 90%;
+    margin-bottom: 5%;
+    max-height: 31%;
+  }
+}
+
+.gallery-image3 {
+  @include background-image(home-backpacking);
+
+  @media #{$brk-small}{
+    border-radius: 3px;
+    max-width: 90%;
+    margin-bottom: 5%;
+    max-height: 31%;
+  }
+}
+
+.gallery-image4 {
+  @include background-image(home-canoe);
+
+  @media #{$brk-small}{
+    border-radius: 3px;
+    max-width: 90%;
+    margin-bottom: 5%;
+    max-height: 31%;
+  }
+}
+.gallery-image5 {
+  @include background-image(home-photo);
+
+  @media #{$brk-small}{
+    border-radius: 3px;
+    max-width: 90%;
+    margin-bottom: 5%;
+    max-height: 31%;
+  }
+}
+.gallery-image6 {
+  @include background-image(home-custom);
+  flex: 1 1 100%;
+
+  @media #{$brk-small}{
+    border-radius: 3px;
+    max-width: 90%;
+    margin-bottom: 5%;
+    max-height: 31%;
+  }
+}
+
+.icon-container {
+  @extend %flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.grey-circle {
+  @extend %flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  opacity: 0.8;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  transition: 0.25s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+  }
+  @media #{$brk-small}{
+    width: 60px;
+    height: 60px;
+    transition: 0.40s ease-in;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.3);
+    }
+  }
+}
+
+.icon {
+  width: 45%;
+  height: 45%;
+
+  @media #{$brk-small}{
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.caption {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: 100%;
+}
+
+.caption span {
+  display: block;
+  height: 5px;
+  width: 40px;
+  background: $orange;
+  margin-bottom: 16px;
+}

@@ -1,0 +1,21 @@
+%gallery-image {
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  width: 840px;
+  height: 420px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+%flex {
+  display: flex;
+}
+
+%background-center {
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+}

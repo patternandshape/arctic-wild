@@ -1,0 +1,14 @@
+// fonts
+
+@mixin font-face($color, $weight, $family){
+  color: $color;
+  font-weight: $weight;
+  font-family: $family;
+}
+
+// image source
+
+@mixin background-image($name) {
+  $url:"../img/#{$name}.jpg";
+  background: url($url);
+}
