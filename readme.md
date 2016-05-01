@@ -11,13 +11,11 @@ March 4, 2016
 A responsive replica of the Arctic Wild website (www.arcticwild.com) using Flexbox and CSS transitions.
 
 
-##### Technologies Used
+### Technologies Used
 
 * HTML
 * SCSS
 * Bourbon
-* Atom
-* Terminal
 * Google Fonts
 * Font Awesome
 
@@ -27,4 +25,4 @@ A responsive replica of the Arctic Wild website (www.arcticwild.com) using Flexb
 
 *This software is licensed under the MIT license.*
 
-&copy;2016 **Molly Curtin**
+&copy; 2016 **Molly Curtin**
